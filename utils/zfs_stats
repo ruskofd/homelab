@@ -1,0 +1,15 @@
+#!/usr/bin/env bash
+
+set -eo pipefail
+
+zfs_arc_curr_size=$(awk '/^size/ { print $3 / 1048576 }' < /proc/spl/kstat/zfs/arcstats)
+zfs_arc_max_size=$(awk '/^c_max/ { print $3 / 1048576 }' < /proc/spl/kstat/zfs/arcstats)
+zfs_arc_target_size=$(awk '/^\<c\>/ { print $3 / 1048576 }' < /proc/spl/kstat/zfs/arcstats)
+
+echo "ZFS ARC stats"
+echo "-------------"
+
+echo "Current size: ${zfs_arc_curr_size} MB"
+echo "Maximum size: ${zfs_arc_max_size} MB"
+echo "Target size: ${zfs_arc_target_size} MB"
+echo ""
