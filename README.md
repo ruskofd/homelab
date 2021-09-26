@@ -21,8 +21,8 @@ To enable these options :
 
 ```shell
 $ snap set lxd shiftfs.enable=true
-$ snap set lxd ...
-...
+$ snap set lxd lxcfs.loadavg=true
+$ snap set lxd shiftfs.enable=true
 
 $ systemctl restart snap.lxd.daemon.service
 ```
