@@ -19,7 +19,7 @@ devices:
     type: nic
   root:
     path: /
-    pool: zfsp1
+    pool: ssd-1
     type: disk
 name: vm-default
 used_by: []
