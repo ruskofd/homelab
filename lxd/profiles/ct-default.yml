@@ -15,7 +15,7 @@ devices:
     type: nic
   root:
     path: /
-    pool: ssd-1
+    pool: ssd-zfs
     type: disk
 name: ct-default
 used_by: []
