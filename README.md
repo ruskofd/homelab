@@ -1,6 +1,6 @@
 ## General informations
 
-* **Operating System** : Ubuntu 20.04.3 Server
+* **Operating System** : Ubuntu 21.10 Server
 * **Hypervisor** : LXD 4.19 (system containers and virtual machines manager)
 
 ## Reminders
