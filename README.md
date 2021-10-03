@@ -1,7 +1,7 @@
 ## General informations
 
-* **Operating System** : Ubuntu 21.10 Server
-* **Hypervisor** : LXD 4.18 (system containers and virtual machines manager)
+* **Operating System** : Ubuntu 20.04.3 Server
+* **Hypervisor** : LXD 4.19 (system containers and virtual machines manager)
 
 ## Reminders
 
@@ -20,7 +20,7 @@
 To enable these options :
 
 ```shell
-$ snap set lxd shiftfs.enable=true
+$ snap set lxd lxcfs.pidfd=true
 $ snap set lxd lxcfs.loadavg=true
 $ snap set lxd shiftfs.enable=true
 
