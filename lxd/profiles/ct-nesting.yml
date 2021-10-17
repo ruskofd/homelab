@@ -3,6 +3,9 @@
 # * OverlayFS does not work on top of ZFS : you should use a dedicated filesystem mountpoint (using BTRFS, LVM or dir) through an LXD storage volume to use this driver.
 # * OverlayFS does not seems to be 100% supported on top of an 'id mapped mount' (shiftfs on Ubuntu) but containers are running without problems.
 # * ZFS can't be nested so we can't use the ZFS driver for Docker/Podman inside an LXD container (but this is possible for BTRFS however)
+# * Syscalls required to run OverlayFS in a container (handled by LXD syscalls interception) :
+#  - mknod: create device nodes
+#  - setxattr: set extended attributes in inodes 
 #
 config:
   limits.kernel.nofile: 65535
