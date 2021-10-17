@@ -1,6 +1,6 @@
 ## General informations
 
-* **Operating System** : Ubuntu Server 21.10 'Impish Indri'
+* **Operating System** : Ubuntu Server 21.10 *Impish Indri*
 * **Hypervisor** : LXD 4.19
 
 ## LXD options
