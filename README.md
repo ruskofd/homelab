@@ -1,7 +1,7 @@
 ## General informations
 
-* **Operating System** : Ubuntu 21.10 Server
-* **Hypervisor** : LXD 4.19 (system containers and virtual machines manager)
+* **Operating System** : Ubuntu Server 21.10 'Impish Indri'
+* **Hypervisor** : LXD 4.19
 
 ## LXD options
 
