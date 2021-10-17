@@ -1,0 +1,27 @@
+#!/bin/sh
+# pam_motd does not carry the environment
+[ -f /etc/default/locale ] && . /etc/default/locale
+export LANG
+cores=$(grep -c ^processor /proc/cpuinfo 2>/dev/null)
+[ "$cores" -eq "0" ] && cores=1
+threshold="${cores:-1}.0"
+
+if [ -z "$DISTRIB_DESCRIPTION" ] && [ -x /usr/bin/lsb_release ]; then
+        # Fall back to using the very slow lsb_release utility
+        DISTRIB_DESCRIPTION=$(lsb_release -s -d)
+fi
+
+if [ $(echo "`cut -f1 -d ' ' /proc/loadavg` < $threshold" | bc) -eq 1 ]; then
+    echo
+    echo -n "Here is the current server status as of "
+    echo "$(/bin/date '+%A %B %d %Y') at $(/bin/date '+%T') :"
+    echo ""
+    echo "  -------------------------"
+    printf "  Kernel: %s\n" "$(uname -r)"
+    echo "  -------------------------"
+    echo
+    /usr/bin/landscape-sysinfo
+else
+    echo
+    echo " System information disabled due to load higher than $threshold"
+fi

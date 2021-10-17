@@ -1,0 +1,25 @@
+#!/bin/bash
+
+lxd_ct_running_count="$(/snap/bin/lxc list --format=json  | jq -r '.[] | select(.type == "container" and .state.status == "Running") | .name' | wc -l)"
+lxd_vm_running_count="$(/snap/bin/lxc list --format=json  | jq -r '.[] | select(.type == "virtual-machine" and .state.status == "Running") | .name' | wc -l)"
+
+echo ""
+echo "  LXD server status"
+echo "  -----------------"
+echo ""
+echo "  Number of running containers: ${lxd_ct_running_count}"
+echo "  Number of running virtual machines : ${lxd_vm_running_count}"
+echo ""
+
+# Store warning in file as csv
+/snap/bin/lxc warning list --format=csv > /tmp/lxd_warning_list
+
+if [ -s /tmp/lxd_warning_list ]; then
+  echo "  LXD server warnings :"
+  while IFS= read -r warning
+  do
+    awk -F',' '{ print "   * ["$4"] " $2 " (count: " $5 ")" ; }' <<< $warning
+  done < "/tmp/lxd_warning_list"
+else
+  echo "  No LXD server warnings"
+fi
