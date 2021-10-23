@@ -1,7 +1,12 @@
 ## General informations
 
-* **Operating System** : Ubuntu Server 21.10 *Impish Indri*
-* **Hypervisor** : LXD 4.19
+* **Main server (Baikonour)**
+  - **Operating System** : Ubuntu Server 21.10 *Impish Indri*
+  - **Hypervisor** : LXD 4.19
+
+* **Raspberry Pi 4 (Spoutnik)**
+  - **Operating System** : Ubuntu Server 21.10 *Impish Indri*
+  - **Hypervisor** : LXD 4.19
 
 ## LXD options
 
