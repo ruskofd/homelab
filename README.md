@@ -2,13 +2,13 @@
 
 * **Main server** (Baikonour):
 
- - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
- - ***Hypervisor*** : LXD 4.19 (containers + VMs)
+  - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
+  - ***Hypervisor*** : LXD 4.19 (containers + VMs)
 
 * **Raspberry Pi 4** (Spoutnik):
 
- - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
- - ***Container manager*** : systemd-nspawn (systemd 248)
+  - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
+  - ***Container manager*** : systemd-nspawn (systemd 248)
 
 ## LXD options
 
