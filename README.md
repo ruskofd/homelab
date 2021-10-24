@@ -1,7 +1,14 @@
 ## General informations
 
-- **Operating System** : Ubuntu Server 21.10 *Impish Indri*
-- **Hypervisor** : LXD 4.19
+* **Main server** (Baikonour):
+
+- ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
+- ***Hypervisor*** : LXD 4.19 (containers + VMs)
+
+* **Raspberry Pi 4** (Spoutnik):
+
+- ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
+- ***Container manager*** : systemd-nspawn (systemd 248)
 
 ## LXD options
 
@@ -42,3 +49,6 @@ Then, restart the LXD daemon :
 * Kernel documentation :
   * sysctl : https://www.kernel.org/doc/Documentation/sysctl/
 * Seccomp Notify (syscall interception) : https://brauner.github.io/2020/07/23/seccomp-notify.html 
+* systemd-nspawn : https://www.freedesktop.org/software/systemd/man/systemd-nspawn.html 
+* mkosi : https://github.com/systemd/mkosi
+* CoreDNS : https://coredns.io/

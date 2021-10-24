@@ -1,0 +1,12 @@
+[Distribution]
+Distribution=ubuntu
+Release=impish
+
+[Output]
+Format=directory
+Output=/var/lib/machines/dns
+Password=root
+
+[Content]
+Packages=systemd,bash,bash-completion,curl,lsof,less,netcat-openbsd,netplan.io,socat,unzip,vim,wget
+Cache=/var/cache/mkosi
