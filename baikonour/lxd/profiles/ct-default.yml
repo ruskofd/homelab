@@ -2,7 +2,7 @@
 config:
   limits.kernel.nofile: 65535
   limits.processes: 1024
-  user.user-data: |
+  cloud-init.user-data: |
     #cloud-config
     ssh_authorized_keys:
       - ssh-ed25519 <>

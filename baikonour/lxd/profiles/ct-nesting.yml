@@ -13,7 +13,7 @@ config:
   security.nesting: true
   security.syscalls.intercept.mknod: true
   security.syscalls.intercept.setxattr: true
-  user.user-data: |
+  cloud-init.user-data: |
     #cloud-config
     ssh_authorized_keys:
       - ssh-ed25519 <>

@@ -3,7 +3,7 @@ config:
   limits.cpu: "1"
   limits.memory: 1024MiB
   security.secureboot: "false"
-  user.user-data: |
+  cloud-init.user-data: |
     #cloud-config
     ssh_authorized_keys:
       - ssh-ed25519 <>
