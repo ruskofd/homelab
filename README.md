@@ -3,7 +3,7 @@
 * **Main server** (Baikonour):
 
   - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
-  - ***Hypervisor*** : LXD 4.20 (containers + VMs)
+  - ***Hypervisor*** : LXD 4.21 (containers + VMs)
 
 * **Raspberry Pi 4** (Spoutnik):
 
