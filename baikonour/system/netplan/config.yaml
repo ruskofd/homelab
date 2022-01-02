@@ -1,5 +1,6 @@
 ---
 network:
+  version: 2
   renderer: networkd
   ethernets:
     enp35s0:
@@ -10,10 +11,9 @@ network:
       addresses: [ 10.0.122.3/24 ]
       routes:
         - to: default
-          via: 10.0.1.1
+          via: 10.0.122.1
       nameservers:
         addresses:
         - 208.67.222.222
         - 208.67.220.220
         search: []
-  version: 2
