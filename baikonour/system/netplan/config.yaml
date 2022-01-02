@@ -1,13 +1,13 @@
 ---
 network:
+  renderer: networkd
   ethernets:
     enp35s0:
-      addresses:
-      - 10.0.1.3/24
-      - 10.0.1.100/32
-      - 10.0.1.101/32
-      - 10.0.1.102/32
-      - 10.0.1.103/32
+      dhcp4: no
+  bridges:
+    lxdbr0:
+      interfaces: [ enp35s0 ]
+      addresses: [ 10.0.122.3/24 ]
       routes:
         - to: default
           via: 10.0.1.1
