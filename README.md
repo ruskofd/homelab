@@ -1,15 +1,15 @@
 ## General informations
 
-* **Backbone router** (Mir):
+* **Backbone router** - *Mir*
 
   - Mikrotik **RB5009UG+S+IN** with RouterOS *7.1.1*
 
-* **Main server** (Baikonour):
+* **Main server** - *Baikonour*
 
   - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
   - ***Hypervisor*** : LXD 4.21 (containers + VMs)
 
-* **Raspberry Pi 4** (Spoutnik):
+* **Raspberry Pi 4** - *Spoutnik*
 
   - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
   - ***Hypervisor*** : LXD 4.21 (containers only)
