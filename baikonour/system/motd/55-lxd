@@ -20,6 +20,4 @@ if [ -s /tmp/lxd_warning_list ]; then
   do
     awk -F',' '{ print "   * ["$4"] " $2 " (count: " $5 ")" ; }' <<< $warning
   done < "/tmp/lxd_warning_list"
-else
-  echo "  No LXD server warnings"
 fi
