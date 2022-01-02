@@ -1,5 +1,9 @@
 ## General informations
 
+* **Backbone router** (Mir):
+
+  - Mikrotik **RB5009UG+S+IN** with RouterOS *7.1.1*
+
 * **Main server** (Baikonour):
 
   - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
@@ -8,7 +12,7 @@
 * **Raspberry Pi 4** (Spoutnik):
 
   - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
-  - ***Container manager*** : systemd-nspawn (systemd 248)
+  - ***Hypervisor*** : LXD 4.21 (containers only)
 
 ## LXD options
 
@@ -32,23 +36,11 @@ Then, restart the LXD daemon :
   systemctl restart snap.lxd.daemon.service
   ```
 
-## Tips/tricks
-
-* Create custom LXD SNAT network:
-
-  ```shell
-  lxc network create lxdbr0 --type=bridge ipv4.address=192.168.122.1/24 ipv4.dhcp.ranges=192.168.122.10-192.168.122.254 ipv4.nat=true ipv6.address=none dns.domain=home.lab
-  ```
-
 ## References
 
 * LXD : https://linuxcontainers.org/lxd/
 * LXD documentation : https://linuxcontainers.org/lxd/docs/master/
 * TuneD : https://tuned-project.org/
 * ZFS on Linux : https://zfsonlinux.org
-* Kernel documentation :
-  * sysctl : https://www.kernel.org/doc/Documentation/sysctl/
 * Seccomp Notify (syscall interception) : https://brauner.github.io/2020/07/23/seccomp-notify.html 
-* systemd-nspawn : https://www.freedesktop.org/software/systemd/man/systemd-nspawn.html 
-* mkosi : https://github.com/systemd/mkosi
 * CoreDNS : https://coredns.io/
