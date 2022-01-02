@@ -1,16 +1,18 @@
 ---
 network:
+  version: 2
+  renderer: networkd
   ethernets:
     eth0:
       dhcp4: no
   bridges:
-    virbr0:
+    lxdbr0:
       interfaces: [ "eth0" ]
       addresses: [ "10.0.1.4/24" ]
       routes:
         - to: default
           via: 10.0.1.1
       nameservers:
-        addresses: [ "10.0.1.5" ]
-        search: [ "home.lab" ]
-  version: 2
+        addresses:
+          - 208.67.222.222
+          - 208.67.220.220
