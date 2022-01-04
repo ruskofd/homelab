@@ -4,16 +4,14 @@ network:
   renderer: networkd
   ethernets:
     enp35s0:
-      dhcp4: no
-  bridges:
-    lxdbr0:
-      interfaces: [ enp35s0 ]
-      addresses: [ 10.0.122.3/24 ]
+      addresses:
+        - 192.168.11.3/24
+        - 192.168.11.10/32
+        - 192.168.11.11/32
+        - 192.168.11.12/32
       routes:
         - to: default
-          via: 10.0.122.1
+          via: 192.168.11.1
       nameservers:
-        addresses:
-        - 208.67.222.222
-        - 208.67.220.220
-        search: []
+        addresses: [ 192.168.11.5 ]
+        search: [ home.lab ]
