@@ -1,9 +1,5 @@
 ## General informations
 
-* **Backbone router** - *Mir*
-
-  - Mikrotik [**RB5009UG+S+IN**](https://mikrotik.com/product/rb5009ug_s_in) with RouterOS *7.1.1*
-
 * **Main server** - *Baikonour*
 
   - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
