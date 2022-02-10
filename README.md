@@ -1,9 +1,9 @@
 ## General informations
 
-* **Main server** - *Baikonour*
+**Main server** - *Baikonour*
 
-  - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
-  - ***Hypervisor*** : LXD 4.22 (containers and virtual machines)
+- ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
+- ***Hypervisor*** : LXD 4.22 (containers and virtual machines)
 
 ## LXD options
 
