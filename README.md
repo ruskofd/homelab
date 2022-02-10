@@ -3,20 +3,15 @@
 * **Main server** - *Baikonour*
 
   - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
-  - ***Hypervisor*** : LXD 4.21 (containers + VMs)
-
-* **Raspberry Pi 4** - *Spoutnik*
-
-  - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
-  - ***Hypervisor*** : LXD 4.21 (containers only)
+  - ***Hypervisor*** : LXD 4.22 (containers and virtual machines)
 
 ## LXD options
 
 The following options provide some convenience for container usage :
 
-* `lxcfs.pidfd` : Per-container process tracking ([What is pidfd ?](https://kernel-recipes.org/en/2019/talks/pidfds-process-file-descriptors-on-linux/))
-* `lxcfs.loadavg` : Per-container load average tracking
-* `shiftfs.enable` (require an Ubuntu host) : Enable ShiftFS for containers ([What is shiftfs ?](https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155)) 
+  - `lxcfs.pidfd` : Per-container process tracking ([What is pidfd ?](https://kernel-recipes.org/en/2019/talks/pidfds-process-file-descriptors-on-linux/))
+  - `lxcfs.loadavg` : Per-container load average tracking
+  - `shiftfs.enable` (require an Ubuntu host) : Enable ShiftFS for containers ([What is shiftfs ?](https://discuss.linuxcontainers.org/t/trying-out-shiftfs/5155)) 
 
 Enable these options through `snap` command-line :
 
@@ -36,7 +31,7 @@ Then, restart the LXD daemon :
 
 * LXD : https://linuxcontainers.org/lxd/
 * LXD documentation : https://linuxcontainers.org/lxd/docs/master/
+* netplan.io : https://netplan.io/
+* Seccomp Notify (syscall interception) : https://brauner.github.io/2020/07/23/seccomp-notify.html 
 * TuneD : https://tuned-project.org/
 * ZFS on Linux : https://zfsonlinux.org
-* Seccomp Notify (syscall interception) : https://brauner.github.io/2020/07/23/seccomp-notify.html 
-* CoreDNS : https://coredns.io/

@@ -1,13 +1,17 @@
 ---
 config:
-  limits.kernel.nofile: 65535
-  limits.processes: 1024
+  limits.cpu: "1"
+  limits.memory: 1024MiB
+  security.secureboot: "false"
   cloud-init.user-data: |
     #cloud-config
     ssh_authorized_keys:
       - ssh-ed25519 <>
-description: Default LXD profile for containers
+description: LXD profile for running virtual machines
 devices:
+  config:
+    source: cloud-init:config
+    type: disk
   eth0:
     name: eth0
     nictype: bridged
@@ -15,7 +19,7 @@ devices:
     type: nic
   root:
     path: /
-    pool: ssd-zfs
+    pool: zfsp1
     type: disk
-name: ct-default
+name: vm
 used_by: []
