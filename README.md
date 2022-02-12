@@ -3,7 +3,7 @@
 **Main server** - *Baikonour*
 
 - ***Operating System*** : Ubuntu Server 21.10 *Impish Indri*
-- ***Hypervisor*** : LXD 4.22 (containers and virtual machines)
+- ***Hypervisor*** : LXD 4.23 (containers and virtual machines)
 
 ## LXD options
 
