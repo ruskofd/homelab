@@ -19,7 +19,7 @@ devices:
     type: nic
   root:
     path: /
-    pool: zfsp1
+    pool: lvmp1
     type: disk
 name: vm
 used_by: []

@@ -15,7 +15,7 @@ devices:
     type: nic
   root:
     path: /
-    pool: zfsp1
+    pool: lvmp1
     type: disk
-name: ct-default
+name: default
 used_by: []
