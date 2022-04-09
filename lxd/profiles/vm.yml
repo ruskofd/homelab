@@ -4,9 +4,16 @@ config:
   limits.memory: 1024MiB
   security.secureboot: "false"
   cloud-init.user-data: |
-    #cloud-config
-    ssh_authorized_keys:
-      - ssh-ed25519 <>
+    cloud-init.user-data: |
+      #cloud-config
+      users:
+      - name: core
+        groups: [ systemd-journal ]
+        lock_passwd: True
+        sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+        shell: /bin/bash
+        ssh_authorized_keys:
+        - ssh-ed25519 <>
 description: LXD profile for running virtual machines
 devices:
   config:
