@@ -3,7 +3,7 @@
 **Main server** - *Baikonour*
 
 - ***Operating System*** : Ubuntu Server 22.04 LTS *Jammy Jellyfish*
-- ***Hypervisor*** : LXD 5.0 LTS (containers and virtual machines)
+- ***Hypervisor*** : LXD 5.1 (containers and virtual machines)
 
 ## LXD options
 
