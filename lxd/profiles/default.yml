@@ -5,16 +5,15 @@ config:
   limits.cpu: 1
   limits.memory: 1GiB
   cloud-init.user-data: |
-    cloud-init.user-data: |
-      #cloud-config
-      users:
-      - name: core
-        groups: [ systemd-journal ]
-        lock_passwd: True
-        sudo: ["ALL=(ALL) NOPASSWD:ALL"]
-        shell: /bin/bash
-        ssh_authorized_keys:
-        - ssh-ed25519 <>
+    #cloud-config
+    users:
+    - name: core
+      groups: [ systemd-journal ]
+      lock_passwd: True
+      sudo: ["ALL=(ALL) NOPASSWD:ALL"]
+      shell: /bin/bash
+      ssh_authorized_keys:
+      - ssh-ed25519 <>
 description: Default LXD profile for containers
 devices:
   eth0:
@@ -24,7 +23,7 @@ devices:
     type: nic
   root:
     path: /
-    pool: default
+    pool: zfsp1
     size: 10GB
     type: disk
 name: default
